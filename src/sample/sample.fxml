@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <left>
+      <Pane minWidth="380">
+         <Label layoutX="14.0" layoutY="14.0" text="Probability of node failure:" />
+         <Label layoutX="14.0" layoutY="43.0" text="Probability of node recovery:" />
+         <TextField fx:id="tfNodeFailure" layoutX="196.0" layoutY="10.0" text="0.1; 0.3; 0.1; 0.2" />
+         <TextField fx:id="tfNodeRecovery" layoutX="196.0" layoutY="39.0" text="3; 2; 1; 2" />
+         <Label layoutX="14.0" layoutY="75.0" text="Average message length :" />
+         <TextField fx:id="tfMessageLength" layoutX="196.0" layoutY="71.0" text="256" />
+         <Label layoutX="14.0" layoutY="109.0" text="Message intencity:" />
+         <TextField fx:id="tfIntencity" layoutX="196.0" layoutY="105.0" text="30" />
+         <Label layoutX="14.0" layoutY="146.0" text="Min delivery time:" />
+         <TextField fx:id="tfDeliveryTime" layoutX="196.0" layoutY="142.0" text="5" />
+         <Label layoutX="14.0" layoutY="179.0" text="Adressing:" />
+         <TextField fx:id="tfAdressing" layoutX="196.0" layoutY="175.0" text="2-3" />
+         <Label layoutX="14.0" layoutY="212.0" text="Chanel speed:" />
+         <TextField fx:id="tfChanelSpeed" layoutX="196.0" layoutY="208.0" text="1200; 4800; 9600; 1200; 4800; 1200" />
+         <Label layoutX="14.0" layoutY="244.0" text="Chanel count in bundle:" />
+         <TextField fx:id="tfCountInBundle" layoutX="196.0" layoutY="240.0" text="1; 6; 2; 1; 6; 1" />
+         <Label layoutX="14.0" layoutY="276.0" text="Chanel recovery time:" />
+         <TextField fx:id="tfRecoveryTime" layoutX="196.0" layoutY="272.0" text="1; 6; 2; 1; 6; 1" />
+         <Label layoutX="14.0" layoutY="307.0" text="Probabiliy of chanel failure" />
+         <TextField fx:id="tfChanelFailure" layoutX="196.0" layoutY="303.0" text="0.1; 0.05; 0.2; 0.1; 0.05; 0.2" />
+         <Label layoutX="14.0" layoutY="338.0" text="Average package length :" />
+         <TextField fx:id="tfPackageLength" layoutX="196.0" layoutY="334.0" text="1024; 4096; 8192; 1024; 4096; 1024" />
+         <Button layoutX="14.0" layoutY="390.0" mnemonicParsing="false" onAction="#count" text="Count" />
+      </Pane>
+   </left>
+   <center>
+      <VBox alignment="CENTER" spacing="10">
+         <Label text="Routes" />
+         <TableView fx:id="tbRoutes" prefHeight="200.0" prefWidth="479.0"/>
+         <Label text="Message Intensity" />
+         <TableView fx:id="tbMsgIntensity" prefHeight="200.0" prefWidth="479.0"/>
+         <Label text="Average delivery time" />
+         <TableView fx:id="tbAvgDelTime" prefHeight="200.0" prefWidth="479.0"/>
+         <Label text="Wait time per node" />
+         <TableView fx:id="tbWaitTime" prefHeight="200.0" prefWidth="479.0"/>
+         <Label text="Average Message Queue" />
+         <TableView fx:id="tbMsgInQueue" prefHeight="200.0" prefWidth="479.0"/>
+      </VBox>
+   </center>
+</BorderPane>
